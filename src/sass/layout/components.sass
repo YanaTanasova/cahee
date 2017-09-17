@@ -1,0 +1,92 @@
+@import "../misc/_mixin.sass"
+@import "../fonts/fonts.css"
+
+$container-width: 1200px
+$title-font-heavy: 'Raleway Black', sans-serif
+$logo-font: 'Pacifico Regular', sans-serif
+$desc-font: 'Raleway Light', sans-serif
+$title-font: 'Raleway Bold', sans-serif
+$text-color: #262626
+$orange-btn: #ff6033
+$blue-btn: #5585a2
+$green-btn: #96b92c
+$red-btn: #f72b3b
+
+*
+	box-sizing: border-box
+
+html, body
+	margin: 0
+	padding: 0
+
+h1, h2, h3, h4, h5, h6, p, ul, li
+	margin: 0
+	padding: 0
+
+ul
+	list-style: none
+
+a
+	text-decoration: none
+
+.container
+	max-width: $container-width
+	padding: 0 15px
+	margin: 0 auto
+	position: relative
+	height: 100%
+
+	@include media(400px)
+		padding: 0 10px
+
+.container-flex
+	display: flex
+	align-items: center
+
+.desc
+	font-family: $desc-font
+	@include rem(17)
+	line-height: 1.59
+	color: $text-color
+
+	@include media(1000px)
+		@include rem(16)
+
+	@include media(500px)
+		@include rem(15)
+
+.title
+	font-family: $title-font
+	@include rem(90)
+	color: #fff
+
+	@include media(1200px)
+		@include rem(80)
+
+	@include media(1000px)
+		@include rem(70)
+
+	@include media(820px)
+		@include rem(60)
+
+	@include media(700px)
+		@include rem(50)
+
+	@include media(500px)
+		@include rem(40)
+
+.title--dark
+	color: $text-color
+
+.btn
+	font-family: $desc-font
+	@include rem(20)
+	color: #fff
+	text-transform: uppercase
+	padding: 15px 24px
+	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+	display: inline-block
+	transition: background .3s
+
+	@include media(650px)
+		@include rem(18)

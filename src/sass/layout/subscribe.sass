@@ -1,0 +1,65 @@
+/* subscribe */
+
+.subscribe
+	background: url(../img/subscribe-bg.jpg) no-repeat center center
+	background-size: cover
+	padding: 135px 0 165px 0
+
+	@include media(1000px)
+		padding: 85px 0
+
+	@include media(500px)
+		padding: 40px 0
+
+	&__title
+		@include rem(40)
+
+		@include media(360px)
+			@include rem(32)
+
+	&__desc
+		max-width: 545px
+		margin-top: 13px
+
+	&__form
+		margin-top: 25px
+
+	&__input
+		width: 570px
+		padding: 15px
+		border: 1px solid #262626
+		font-size: 1rem
+		color: $text-color
+		vertical-align: top
+
+		@include media(600px)
+			width: 100%
+
+		&:-webkit-input-placeholder
+			font-family: $desc-font
+			color: rgba(38, 38, 38, 0.5)
+		&:-moz-placeholder
+			font-family: $desc-font
+			color: rgba(38, 38, 38, 0.5)
+		&:-ms-input-placeholder
+			font-family: $desc-font
+			color: rgba(38, 38, 38, 0.5)
+	
+	&__btn
+		background: $green-btn
+		border: none
+		padding: 13px 24px
+		margin-left: 30px
+		cursor: pointer
+
+		@include media(1000px)
+			display: block
+			margin-top: 20px
+			margin-left: 0
+
+		@include media(360px)
+			width: 100%
+
+		&:hover
+			background: darken($green-btn, 10%)
+	

@@ -1,0 +1,38 @@
+/* about */
+
+.about
+	background: url(../img/about.jpg) no-repeat center center
+	background-size: cover
+	min-height: 650px
+	padding: 160px 0 100px 0
+
+	@include media(1200px)
+		padding-top: 100px
+		min-height: auto
+
+	@include media(800px)
+		background: #00c4c4 radial-gradient(circle at 0 0, #00c4c4, #00b7b7 32%, #00adad 68%, #009c9c)
+	
+	@include media(800px)
+		padding: 60px 0
+
+	@include media(500px)
+		padding: 40px 0
+
+	&__content
+		width: 500px
+		margin-left: auto
+
+		@include media(1200px)
+			width: 45%
+
+		@include media(800px)
+			width: 80%
+			margin-left: 0
+
+		@include media(550px)
+			width: 100%
+
+	&__desc
+		color: #fff
+		margin-top: 10px

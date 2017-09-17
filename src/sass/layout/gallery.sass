@@ -1,0 +1,91 @@
+/* gallery */
+
+.gallery
+	background: #ffe92f
+	padding: 85px 0 120px 0
+	text-align: center
+
+	@include media(1000px)
+		padding: 55px 0 90px 0
+
+	@include media(500px)
+		padding: 40px 0
+
+	&__desc
+		max-width: 580px
+		margin: 20px auto 0
+
+		@include media(1000px)
+			margin-top: 10px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-top: 10px
+
+	&__item
+		margin-top: 30px
+		font-size: 0
+
+		@include media(820px)
+			margin-top: 15px
+
+		img
+			width: 100%
+
+		&:nth-child(2)
+			display: flex
+			flex-wrap: wrap
+			flex-direction: column
+			justify-content: space-between
+
+			@include media(1200px)
+				flex-direction: row
+
+				.gallery__link
+					width: 48%
+
+					@include media(820px)
+						width: 49%
+
+					@include media(650px)
+						width: 100%
+						margin-top: 15px
+
+						&:first-child
+							margin-top: 0
+
+		@include media(1200px)
+			width: 100%
+
+		@include media(820px)
+			width: 49%
+
+			&:nth-child(1),
+			&:nth-child(2)
+				width: 100%
+
+			@include media(650px)
+				width: 100%
+
+	&__link
+		display: block
+		box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5)
+		background: $blue-btn
+
+		img
+			transition: opacity .3s
+
+		&:hover img
+			opacity: .8
+		
+	&__btn
+		margin-top: 50px
+		background: $blue-btn
+		padding: 15px 40px
+
+		&:hover
+			background: darken($blue-btn, 10%)
+
+

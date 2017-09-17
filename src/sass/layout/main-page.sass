@@ -1,0 +1,51 @@
+/* main */
+
+/* main-page */
+
+.main-page
+	height: 100vh
+	background: url(../img/main-bg.jpg) no-repeat center center
+	background-size: cover
+	position: relative
+	color: $text-color
+
+	&__content
+		max-width: 400px
+		padding-top: 88px
+
+		@include media(1000px)
+			padding-top: 78px
+
+		@include media(720px)
+			max-width: 350px
+
+		@include media(615px)
+			max-width: 320px
+
+	&__title
+		font-family: $title-font-heavy
+		@include rem(60)
+
+		@include media(600px)
+			@include rem(50)
+
+	&__desc
+		margin-top: 20px
+
+		@include media(520px)
+			background: rgba(255, 255, 255, .8)
+			padding: 5px
+
+	&__btn
+		background: $orange-btn
+		margin-top: 27px
+
+		&:hover
+			background: darken($orange-btn, 10%)
+
+.scroll
+	position: absolute
+	bottom: 20px
+	left: 50%
+	transform: translateX(-50%)
+	cursor: pointer

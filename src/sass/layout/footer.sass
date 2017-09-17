@@ -1,0 +1,54 @@
+/* footer */
+
+.footer
+	padding: 30px 0
+	background: #262626
+	font-family: $desc-font
+	color: #b9b9b9
+
+	@include media(650px)
+		padding: 20px 0
+
+	&__container
+		justify-content: center
+		flex-wrap: wrap
+
+		@include media(650px)
+			flex-direction: column
+
+	&__author
+		@include rem(15)
+		margin-left: auto
+
+		@include media(650px)
+			margin-left: 0
+			margin-top: 5px
+		
+		@include media(400px)
+			@include rem(14)
+			
+		span
+			font-family: $title-font
+			color: #ff2b58
+
+	&__logo
+		@include media(650px)
+			margin-top: 5px
+
+.copyright
+	@include rem(16)
+	margin-right: auto
+
+	@include media(650px)
+		margin-right: 0
+
+	@include media(400px)
+		@include rem(15)
+
+.logo__link--footer
+	@include rem(25)
+	color: #b9b9b9
+
+
+
+

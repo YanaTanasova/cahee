@@ -1,0 +1,22 @@
+$base-font: 16
+
+@mixin posCenter
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+
+@mixin rem($font)
+	font-size: $font / $base-font + rem
+
+@mixin medium
+	@media screen and (max-width: 1024px)
+		@content
+
+@mixin small
+	@media screen and (max-width: 768px)
+		@content
+
+@mixin media($width)
+	@media screen and (max-width: $width)
+		@content

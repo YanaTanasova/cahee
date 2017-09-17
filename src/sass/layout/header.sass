@@ -1,0 +1,103 @@
+
+/* header */
+
+.header
+	position: absolute
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 999
+	padding: 20px 0 10px 0
+
+	@include media(1000px)
+		padding: 10px 0
+
+.header--fixed
+	position: fixed
+	background: rgba(255, 255, 255, .8)
+	padding: 5px 0
+	z-index: 999
+	transition: all .5s
+
+	.logo__link
+		@include rem(36)
+
+	.nav__item
+		@include rem(15)
+
+
+/* logo */
+
+.logo__link
+	font-family: $logo-font
+	@include rem(50)
+	color: $text-color
+
+	@include media(1000px)
+		@include rem(40)
+
+/* nav */
+
+.nav
+	margin-left: auto
+
+	&__list
+		@include media(700px)
+			display: none
+			position: absolute
+			top: 68px
+			right: 0
+			background: rgba(255, 255, 255, .95)
+
+			.nav__item
+				border-bottom: 1px solid #cacaca
+				width: 100%
+
+			.nav__item:last-child
+				border-bottom: none
+
+	&__item
+		font-family: $title-font
+		text-transform: uppercase
+		@include rem(16)
+		margin-right: 36px
+		display: inline-block
+
+		@include media(1000px)
+			@include rem(15)
+
+		@include media(1000px)
+			@include rem(14)
+			margin-right: 25px
+
+		@include media(700px)
+			display: block
+			padding: 15px 35px 15px 17px
+		
+		&:last-child
+			margin-right: 0
+
+		.current
+			border-top: 3px solid $orange-btn
+
+	&__link
+		color: $text-color
+		padding: 6px 0
+		display: inline-block
+		border-top: 3px solid transparent
+		transition: border .3s
+
+		&:hover
+			border-top: 3px solid $orange-btn
+
+.responsive-btn
+	display: none
+	cursor: pointer
+
+	@include media(700px)
+		display: block
+
+	&__icon
+		color: #000
+		@include rem(40)
+	
